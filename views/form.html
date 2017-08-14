@@ -1,0 +1,171 @@
+<div class="card hoverable z-depth-4">
+
+    <div class="card-content">
+        <span class="card-title"> 
+                    <h6 class="header center pink-text">
+                        <i class="tiny material-icons">lock</i> 
+                        Completa el formulario y compra al instante
+                    </h6>
+                </span>
+        <div class="row">
+            <div class="col s12 l6">
+                <div class="col-md-12 text-center">
+                    <h6 class="indigo-text">Vehículo</h6>
+                </div>
+                <div class="input-field col s12">
+                    <input id="placa" type="text" class="validate" onblur="Traer_Vehiculo()" placeholder="Placa" autofocus>
+                
+                </div>
+                <div class="input-field col s12 m6 l6">
+                    <select id="Marca">
+                            <option class="pink-text" value="" disabled selected>Marca</option>
+                            <option class="pink-text" value="1">Toyota</option>
+                            <option class="pink-text" value="2">Kia</option>
+                            <option class="pink-text" value="3">Huyndai</option>
+                        </select>
+
+                </div>
+                <div class="input-field col s12 m6 l6">
+                    <select id="Modelo">
+                            <option class="pink-text" value="" disabled selected>Modelo</option>
+                            <option class="pink-text" value="1">Corolla 1.6</option>
+                            <option class="pink-text" value="2">Cerato 1.6</option>
+                            <option class="pink-text" value="3">Elantra</option>
+                        </select>
+
+                </div>
+                <div class="input-field col s12">
+                    <select id="Tipo">
+                            <option class="pink-text" value="" disabled selected>Tipo</option>
+                            <option class="pink-text" value="1">Automovil</option>
+                            <option class="pink-text" value="2">Camioneta</option>
+                            <option class="pink-text" value="3">Furgoneta</option>
+                        </select>
+
+                </div>
+                <div class="input-field col s12 m6 l6">
+                    <input id="anio" type="number" class="validate" placeholder="Año">
+                     
+                </div>
+                <div class="input-field col s12 m6 l6">
+                    <select>
+                            <option class="pink-text" value="" disabled selected>Uso</option>
+                            <option class="pink-text" value="1">Particular</option>
+                            <option class="pink-text" value="2">Taxi</option>
+                            <option class="pink-text" value="3">Carga</option>
+                        </select>
+
+                </div>
+                <div class="input-field col s12">
+                    <select>
+                            <option class="pink-text" value="" disabled selected>Región</option>
+                            <option class="pink-text" value="1">Lima</option>
+                            <option class="pink-text" value="2">Arequipa</option>
+                          
+                        </select>
+
+                </div>
+            </div>
+
+            <div class="col s12 l6">
+                <div class="col-md-12 text-center">
+                    <h6 class="indigo-text">Contratante</h6>
+                </div>
+                <div class="input-field col s12 m6 l6">
+                    <input id="Dni" type="text" class="validate" onblur="Traer_contratante()" placeholder="DNI" >
+
+                </div>
+                <div class="input-field col s12 m6 l6a">
+                    <input id="nombre" type="text" class="validate" placeholder="Nombres" >
+              
+                </div>
+                <div class="input-field col s12 l6a">
+                    <input id="ApellidoP" type="text" class="validate" placeholder="Apelllido Paterno">
+             
+
+                </div>
+                <div class="input-field col s12">
+                    <input id="ApellidoM" type="text" class="validate" placeholder="Apellido Materno">
+
+                </div>
+                <div class="input-select col s12">
+                    <select id="Depa">
+                            <option class="pink-text" value="" disabled selected>Departamento</option>
+                            <option class="pink-text" value="1">Lima</option>
+                            <option class="pink-text" value="2">La Litertad</option>
+                            <option class="pink-text" value="3">Arequipa</option>
+                        </select>
+
+
+
+                </div>
+
+
+                <div class="input-field col s12  m6 l6">
+                    <select name="Provincia" id="Provi">
+                            <option class="pink-text" value="" disabled selected>Provincia</option>
+                            <option class="pink-text" value="1">Lima</option>
+                            <option class="pink-text" value="2">Barranca</option>
+                            <option class="pink-text" value="3">Cajatambo</option>
+                        </select>
+
+                </div>
+                <div class="input-field col s12  m6 l6">
+                    <select name="Distrito" id="Dist">
+                            <option class="pink-text" value="" disabled selected>Distrito</option>
+                            <option class="pink-text" value="1">Lima</option>
+                            <option class="pink-text" value="2">Miraflores</option>
+                            <option class="pink-text" value="3">San isidro</option>
+                        </select>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="card-action">
+        <a href="#/offer" class="pink-text">Continuar</a>
+    </div>
+</div>
+
+<script>
+
+        $(function () {
+        $('select').material_select();
+        });
+
+        function Traer_contratante() {
+        $("#nombre").val("Juan");
+        $("#ApellidoP").val("Perez");
+        $("#ApellidoM").val("Perez")
+        $("#Depa").val("1");
+        $("#Provi").val("1");
+        $("#Dist").val("3");
+        //reinicializa el componente
+        $('#Depa').material_select();
+        $('#Provi').material_select();
+        $('#Dist').material_select();
+             
+    }
+
+
+    function Traer_Vehiculo() {
+
+        $("#Marca").val("1");
+        $("#Modelo").val("1");
+        $("#Tipo").val("1");
+         $("#anio").val("2016");
+        //reinicializa el componente
+        $('#Marca').material_select();
+        $('#Modelo').material_select();
+        $('#Tipo').material_select();
+
+        
+
+    }
+ 
+
+
+
+
+</script>
